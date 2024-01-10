@@ -8,11 +8,11 @@
 <body>
     <h1>Attendance</h1>
     <ul>
-        <% Students.forEach(student => { %>
+        <% students.forEach(person => { %>
         <li>
-                <%= student.name %> 
+                <%= person.name %> 
                 - 
-                <%= student.present ? 'present' : 'absent' %>
+                <%= person.present ? 'present' : 'absent' %>
         </li>
         <% }) %>
     </ul>

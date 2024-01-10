@@ -1,6 +1,6 @@
 // import express
 import express from 'express'
-import { Students } from './data/attendance.js'
+import { students } from './data/attendance.js'
 
 // initialize express
 const app = express()
@@ -16,8 +16,8 @@ app.get('/', function (req, res){
 })
 
 app.get('/attendance166', function(req, res){
-    res.render('attendance',{
-        Students: Students
+    res.render('attendance/waffles/index',{
+        students: students
     })
 })
 
