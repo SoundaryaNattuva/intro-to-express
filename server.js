@@ -17,7 +17,7 @@ app.get('/', function (req, res){
 
 app.get('/attendance166', function(req, res){
     res.render('attendance/waffles/index',{
-        students: students
+        persons: students
     })
 })
 
