@@ -7,5 +7,15 @@
 </head>
 <body>
   <h1>Dog Adoption</h1>
+  <ul> 
+  <% dogsavailable.forEach(dog => { %>
+    <li>
+      <%= dog.name %>:
+      <%= dog.adopted ? 'adopted' : 'available' %>
+    </li>
+  <% }) %>
+  </ul>
+
+  <a href="/">Return Home</a>
 </body>
 </html>
