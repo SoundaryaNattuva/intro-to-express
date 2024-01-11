@@ -15,15 +15,20 @@ app.get('/', function (req, res){
     res.render('home')
 })
 
+app.get('/', function (req, res){
+    res.redirect('/home')
+})
+// Jurgen suggested doing the above instead of the below. 
+app.get('/home', function(req, res) {
+    res.render('home')
+  })
+
 app.get('/attendance166', function(req, res){
     res.render('attendance/waffles/index',{
         persons: students
     })
 })
 
-app.get('/home', function(req, res) {
-  res.render('home')
-})
 //
 
 app.get('/cats', function(req,res){
