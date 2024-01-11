@@ -1,6 +1,6 @@
 // import express
 import express from 'express'
-import { students } from './data/attendance.js'
+import { students, petsavailable } from './data/attendance.js'
 
 // initialize express
 const app = express()
@@ -23,6 +23,25 @@ app.get('/attendance166', function(req, res){
 
 app.get('/home', function(req, res) {
   res.render('home')
+})
+//
+
+app.get('/cats', function(req,res){
+    res.render('cats/index', {
+        pets : petsavailable
+    })
+})
+
+app.get('/cats/adoption', function(req, res){
+    res.render('cats/adoption')
+})
+
+app.get('/dogs', function(req,res){
+    res.render('dogs/index')
+})
+
+app.get('/dogs/adoption', function(req, res){
+    res.render('dogs/adoption')
 })
 
 
